@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-source ./scripts/basic/*.sh
-source ./scripts/database/*.sh
+for SOURCES in $(find ./scripts -type f -name "*.sh"); do
+     source $SOURCES
+done;
 
-cout info "Hello world!"
+checkroot
 report
