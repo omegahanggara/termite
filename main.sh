@@ -8,6 +8,7 @@ for SOURCES in $(find ./config -type f -name "*.cfg"); do
      source $SOURCES
 done;
 
+check_cfg
 checkroot
 report_detect_mysql
 check_login
