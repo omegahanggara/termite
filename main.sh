@@ -5,4 +5,5 @@ for SOURCES in $(find ./scripts -type f -name "*.sh"); do
 done;
 
 checkroot
-report
+report_detect_mysql
+check_login
