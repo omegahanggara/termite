@@ -6,3 +6,7 @@ function check_login() {
      cout info "Your mysql version is $mysql_ver"
      cout info "Done..."
 }
+
+function sql_cmd() {
+     mysql -u $USER -h $HOST -p -e "$1"
+}
