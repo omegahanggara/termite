@@ -11,3 +11,4 @@ done;
 checkroot
 report_detect_mysql
 check_login
+num_of_databases
