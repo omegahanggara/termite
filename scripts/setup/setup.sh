@@ -25,6 +25,12 @@ function check_cfg () {
                                    cout action "Adding your password to configuration..."
                                    sed -i "s/PASSWORD=/PASSWORD=$mypassword/g" $FILES
                               fi
+                              cin info "Provide new value for $var: "
+                              read new_value
+                              cout info "You new value for $var is $new_value"
+                              cout action "Applying new value to $FILES..."
+                              sed -i "s/$var=/$var=$new_value/g" $FILES
+                              cout info "Done..."
                          elif [[ $answer_to_setup_var == *[Nn]* ]]; then
                               ask_to_setup_var="false"
                               cout warning "This value can't be empy!!! Exiting!!!"
